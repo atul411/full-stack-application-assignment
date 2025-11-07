@@ -47,7 +47,7 @@ export const EquipmentDetailPage = ({ equipment, onNavigate }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Image Section */}
-        <Card>
+        <Card className="border-gray-100">
           <CardContent className="p-0">
             <div className="relative h-96 bg-gray-100 rounded-lg overflow-hidden">
               <ImageWithFallback
@@ -74,7 +74,7 @@ export const EquipmentDetailPage = ({ equipment, onNavigate }) => {
             <p className="text-gray-600">{equipment.description}</p>
           </div>
 
-          <Card>
+          <Card className="border-gray-300">
             <CardContent className="p-6 space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -158,7 +158,7 @@ export const EquipmentDetailPage = ({ equipment, onNavigate }) => {
       </div>
 
       {/* Additional Information */}
-      <Card>
+      <Card className="border-gray-300">
         <CardContent className="p-6">
           <h3 className="text-gray-900 mb-4" style={{ fontSize: '18px', fontWeight: '600' }}>
             Borrowing Information

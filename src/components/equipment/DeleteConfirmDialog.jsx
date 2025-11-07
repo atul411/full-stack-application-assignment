@@ -30,7 +30,7 @@ export const DeleteConfirmDialog = ({
 
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent>
+      <AlertDialogContent className="bg-white">
         <AlertDialogHeader>
           <AlertDialogTitle>Delete Equipment</AlertDialogTitle>
           <AlertDialogDescription>

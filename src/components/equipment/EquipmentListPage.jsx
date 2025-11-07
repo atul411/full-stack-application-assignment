@@ -85,7 +85,7 @@ export const EquipmentListPage = ({ onNavigate }) => {
       </div>
 
       {/* Filters */}
-      <Card>
+      <Card className="border-gray-300">
         <CardContent className="p-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
@@ -95,16 +95,16 @@ export const EquipmentListPage = ({ onNavigate }) => {
                 placeholder="Search equipment..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
+                className="pl-10 border-gray-300"
               />
             </div>
             
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-              <SelectTrigger className="w-full md:w-48">
+              <SelectTrigger className="w-full md:w-48 border-gray-300">
                 <Filter className="w-4 h-4 mr-2" />
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white border-gray-300">
                 <SelectItem value="all">All Categories</SelectItem>
                 <SelectItem value="Lab">Lab</SelectItem>
                 <SelectItem value="Sports">Sports</SelectItem>
@@ -129,7 +129,7 @@ export const EquipmentListPage = ({ onNavigate }) => {
         {filteredEquipment.map((item) => (
           <Card
             key={item.id}
-            className="overflow-hidden hover:shadow-lg transition-all group cursor-pointer"
+            className="overflow-hidden hover:shadow-lg transition-all group cursor-pointer border-gray-300"
             onClick={() => onNavigate('equipment-detail', item)}
           >
             <div className="relative h-48 bg-gray-100 overflow-hidden">

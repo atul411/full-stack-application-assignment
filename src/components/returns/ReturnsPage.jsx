@@ -23,7 +23,8 @@ import {
   Calendar,
   AlertCircle,
   CheckCircle2,
-  DollarSign
+  DollarSign,
+  Package
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
@@ -252,7 +253,7 @@ export const ReturnsPage = ({ onNavigate }) => {
       </div>
 
       <Dialog open={!!selectedRequest} onOpenChange={() => setSelectedRequest(null)}>
-        <DialogContent>
+        <DialogContent className="bg-white max-w-lg">
           <DialogHeader>
             <DialogTitle>Process Equipment Return</DialogTitle>
             <DialogDescription>
@@ -267,7 +268,7 @@ export const ReturnsPage = ({ onNavigate }) => {
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-white border-gray-300">
                   <SelectItem value="Excellent">Excellent</SelectItem>
                   <SelectItem value="Good">Good</SelectItem>
                   <SelectItem value="Fair">Fair</SelectItem>

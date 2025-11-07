@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { useApp } from '../../contexts/AppContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 import {
   Package,
@@ -15,6 +15,7 @@ import {
   Edit,
   Trash2
 } from 'lucide-react';
+
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export const DashboardPage = ({ searchQuery, onNavigate }) => {
@@ -88,7 +89,7 @@ export const DashboardPage = ({ searchQuery, onNavigate }) => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card>
+        <Card className={"border-gray-300"}>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle style={{ fontSize: '14px' }} className="text-gray-600">
               Available
@@ -105,7 +106,7 @@ export const DashboardPage = ({ searchQuery, onNavigate }) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className={"border-gray-300"}>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle style={{ fontSize: '14px' }} className="text-gray-600">
               {currentUser?.role === 'student' ? 'My Borrowed' : 'Total Borrowed'}
@@ -122,7 +123,7 @@ export const DashboardPage = ({ searchQuery, onNavigate }) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className={"border-gray-300"}>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle style={{ fontSize: '14px' }} className="text-gray-600">
               Pending
@@ -139,7 +140,7 @@ export const DashboardPage = ({ searchQuery, onNavigate }) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className={"border-gray-300"}>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle style={{ fontSize: '14px' }} className="text-gray-600">
               Overdue
@@ -158,7 +159,7 @@ export const DashboardPage = ({ searchQuery, onNavigate }) => {
       </div>
 
       {/* Equipment Grid */}
-      <Card>
+      <Card className={"border-gray-300"}>
         <CardHeader>
           <CardTitle>Available Equipment</CardTitle>
           <CardDescription>

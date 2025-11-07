@@ -81,7 +81,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Equipment Summary */}
-        <Card className="lg:col-span-1">
+        <Card className="lg:col-span-1 border-gray-300">
           <CardHeader>
             <CardTitle>Equipment</CardTitle>
           </CardHeader>
@@ -109,7 +109,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
         </Card>
 
         {/* Request Form */}
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2 border-gray-300">
           <CardHeader>
             <CardTitle>Borrowing Request</CardTitle>
           </CardHeader>
@@ -144,7 +144,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
                 <div className="space-y-2">
                   <Label>Start Date *</Label>
                   <Popover>
-                    <PopoverTrigger asChild>
+                    <PopoverTrigger asChild className="border-gray-300">
                       <Button
                         variant="outline"
                         className="w-full justify-start text-left"
@@ -153,7 +153,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
                         {startDate ? format(startDate, 'PPP') : 'Pick a date'}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
+                    <PopoverContent className="w-auto p-0 bg-white border-gray-300" align="start">
                       <Calendar
                         mode="single"
                         selected={startDate}
@@ -168,7 +168,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
                 <div className="space-y-2">
                   <Label>End Date *</Label>
                   <Popover>
-                    <PopoverTrigger asChild>
+                    <PopoverTrigger asChild className="border-gray-300">
                       <Button
                         variant="outline"
                         className="w-full justify-start text-left"
@@ -177,7 +177,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
                         {endDate ? format(endDate, 'PPP') : 'Pick a date'}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
+                    <PopoverContent className="w-auto p-0 bg-white border-gray-300" align="start">
                       <Calendar
                         mode="single"
                         selected={endDate}
@@ -193,10 +193,10 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
               <div className="space-y-2">
                 <Label htmlFor="pickupLocation">Pickup Location *</Label>
                 <Select value={pickupLocation} onValueChange={setPickupLocation}>
-                  <SelectTrigger>
+                  <SelectTrigger className="border-gray-300">
                     <SelectValue placeholder="Select pickup location" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white border-gray-300">
                     <SelectItem value="Equipment Room A">Equipment Room A</SelectItem>
                     <SelectItem value="Equipment Room B">Equipment Room B</SelectItem>
                     <SelectItem value="Science Lab">Science Lab</SelectItem>
@@ -209,6 +209,7 @@ export const RequestFormPage = ({ equipment, onNavigate }) => {
               <div className="space-y-2">
                 <Label htmlFor="reason">Purpose / Reason *</Label>
                 <Textarea
+                  className="border-gray-300"
                   id="reason"
                   placeholder="Briefly describe how you plan to use this equipment..."
                   rows={4}

@@ -291,7 +291,7 @@ export const RequestsPage = ({ onNavigate }) => {
       </Tabs>
 
       <Dialog open={!!selectedRequest} onOpenChange={() => setSelectedRequest(null)}>
-        <DialogContent>
+        <DialogContent className="bg-white">
           <DialogHeader>
             <DialogTitle>
               {actionType === 'approve' && 'Approve Request'}

@@ -11,22 +11,22 @@ export const LoginPage = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [role, setRole] = useState('student');
 
   const handleLogin = (e) => {
     e.preventDefault();
     setError('');
-    
-    const success = login(email, password);
+
+    const success = login(email, password, role);
     if (success) {
       onNavigate('dashboard');
     } else {
-      setError('Invalid email or password. Try: emma.thompson@school.edu');
+      setError('Invalid email or password.');
     }
   };
 
-  const quickLogin = (userEmail) => {
-    setEmail(userEmail);
-    setPassword('password');
+  const quickLogin = (role) => {
+    setRole(role);
   };
 
   return (
@@ -103,29 +103,26 @@ export const LoginPage = ({ onNavigate }) => {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full justify-start"
-                onClick={() => quickLogin('emma.thompson@school.edu')}
+                className={`${role === 'student' ? 'w-full justify-start border-gray-300 bg-green-100' : 'w-full justify-start border-gray-300'}`}
+                onClick={() => quickLogin('student')}
               >
                 <span className="text-[#2F5DFF]">Student</span>
-                <span className="ml-2 text-gray-500">- Emma Thompson</span>
               </Button>
               <Button
                 type="button"
                 variant="outline"
-                className="w-full justify-start"
-                onClick={() => quickLogin('sarah.williams@school.edu')}
+                className={`${role === 'staff' ? 'w-full justify-start border-gray-300 bg-green-100' : 'w-full justify-start border-gray-300'}`}
+                onClick={() => quickLogin('staff')}
               >
                 <span className="text-[#10B981]">Staff</span>
-                <span className="ml-2 text-gray-500">- Sarah Williams</span>
               </Button>
               <Button
                 type="button"
                 variant="outline"
-                className="w-full justify-start"
-                onClick={() => quickLogin('patricia.johnson@school.edu')}
+                className={`${role === 'admin' ? 'w-full justify-start border-gray-300 bg-green-100' : 'w-full justify-start border-gray-300'}`}
+                onClick={() => quickLogin('admin')}
               >
                 <span className="text-[#F59E0B]">Admin</span>
-                <span className="ml-2 text-gray-500">- Dr. Patricia Johnson</span>
               </Button>
             </div>
           </div>

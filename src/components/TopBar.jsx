@@ -45,7 +45,7 @@ export const TopBar = ({ onSearch, onMenuToggle, showMenuButton = false }) => {
             placeholder="Search equipment, requests, or users..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
-            className="pl-10 pr-4 py-2 w-full rounded-lg"
+            className="pl-10 pr-4 py-2 w-full rounded-lg border-gray-300"
           />
         </div>
       </div>
@@ -73,7 +73,7 @@ export const TopBar = ({ onSearch, onMenuToggle, showMenuButton = false }) => {
               </div>
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
+          <DropdownMenuContent align="end" className="w-56 bg-gray-100 border-gray-300">
             <DropdownMenuLabel>
               <div className="flex flex-col">
                 <span>{currentUser?.name}</span>
