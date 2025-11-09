@@ -20,8 +20,8 @@
 - **Frontend:** React + Vite
 - **UI Framework:** Tailwind CSS + Shadcn UI
 - **State Management:** React Context API
-- **Backend:** Node.js/Express.js
-- **Database:** MongoDB
+- **Backend:** .Net
+- **Database:** MsSql server
 - **Authentication:** JWT
 - **Version Control:** Git
 
